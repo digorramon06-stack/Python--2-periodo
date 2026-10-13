@@ -1,0 +1,28 @@
+def inprimir_usuario(usuario: dict):
+    """
+    
+    :param usuario: 
+    :return: abstract
+    """
+    for chave, valor in usuario.items():
+        print('{} = {}'.format(chave, valor))
+def extrair_frequencia_palavras(palavras: list) -> dict:
+    """
+    
+    :param palavras: 
+    :return: 
+    """
+    
+    frequencia = {}
+    for palavra in palavras:
+        frequencia[palavra] = frequencia.get(palavra, 0) + 1
+    return frequencia
+
+usuario = {'nome':'Natan', 'ativo': False}
+usuario['ativo'] = True
+usuario['perfil'] = 'admin'
+usuario.update({'cidade': 'Aracaju', 'idade': 19})
+inprimir_usuario(usuario)
+usuario['palavras'] = ['python', 'SQL', 'python', 'AWS', 'python', 'SQL']
+frequencia = extrair_frequencia_palavras(usuario.get('palavras'))
+print(frequencia)
