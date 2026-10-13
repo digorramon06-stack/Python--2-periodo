@@ -18,10 +18,10 @@ def extrair_frequencia_palavras(palavras: list) -> dict:
         frequencia[palavra] = frequencia.get(palavra, 0) + 1
     return frequencia
 
-usuario = {'nome':'Natan', 'ativo': False}
+usuario = {'nome':'Igor', 'ativo': False}
 usuario['ativo'] = True
 usuario['perfil'] = 'admin'
-usuario.update({'cidade': 'Aracaju', 'idade': 19})
+usuario.update({'cidade': 'Aracaju', 'idade': 20})
 inprimir_usuario(usuario)
 usuario['palavras'] = ['python', 'SQL', 'python', 'AWS', 'python', 'SQL']
 frequencia = extrair_frequencia_palavras(usuario.get('palavras'))
